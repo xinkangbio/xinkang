@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="zh-TW" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>新康膠原蛋白敷料 | 新世代超低分子量活性敷料</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            50: '#f0fdfa',
+                            100: '#ccfbf1',
+                            500: '#14b8a6', /* 藍綠色調 */
+                            600: '#0d9488',
+                            700: '#0f766e',
+                            900: '#134e4a',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .accordion-content {
+            transition: max-height 0.3s ease-out, padding 0.3s ease;
+            max-height: 0;
+            overflow: hidden;
+        }
+        .accordion-content.active {
+            max-height: 500px;
+        }
+    </style>
+</head>
+<body class="font-sans text-gray-800 antialiased bg-gray-50">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-white/90 backdrop-blur-md shadow-sm z-50 border-b border-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex-shrink-0 flex items-center">
+                    <!-- 若您有真實 LOGO 圖檔，請將下方的 div 替換為： <img src="您的圖片網址.png" alt="XCARE 新康生醫" class="h-10 w-auto"> -->
+                    <div class="h-10 flex items-center justify-center text-sm font-medium text-gray-500 border-2 border-dashed border-gray-300 px-4 rounded bg-gray-50">
+                        
+                    </div>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#home" class="text-gray-600 hover:text-primary-600 font-medium transition-colors">首頁</a>
+                    <a href="#features" class="text-gray-600 hover:text-primary-600 font-medium transition-colors">核心技術</a>
+                    <a href="#evidence" class="text-gray-600 hover:text-primary-600 font-medium transition-colors">臨床驗證</a>
+                    <a href="#safety" class="text-gray-600 hover:text-primary-600 font-medium transition-colors">安全性與認證</a>
+                    <a href="#specs" class="text-gray-600 hover:text-primary-600 font-medium transition-colors">產品規格</a>
+                    <a href="#faq" class="text-gray-600 hover:text-primary-600 font-medium transition-colors">常見問題</a>
+                </div>
+                <div class="hidden md:flex">
+                    <a href="#contact" class="bg-primary-600 text-white px-6 py-2.5 rounded-full font-medium hover:bg-primary-700 transition-colors shadow-lg shadow-primary-500/30">
+                        索取樣品 / 聯絡我們
+                    </a>
+                </div>
+                <!-- Mobile menu button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-gray-600 hover:text-primary-600 focus:outline-none">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#features" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-primary-600 hover:bg-gray-50 rounded-md">核心技術</a>
+                <a href="#evidence" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-primary-600 hover:bg-gray-50 rounded-md">臨床驗證</a>
+                <a href="#safety" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-primary-600 hover:bg-gray-50 rounded-md">安全性與認證</a>
+                <a href="#specs" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-primary-600 hover:bg-gray-50 rounded-md">產品規格</a>
+                <a href="#faq" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-primary-600 hover:bg-gray-50 rounded-md">常見問題</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="pt-32 pb-20 lg:pt-40 lg:pb-28 bg-gradient-to-br from-primary-50 to-white overflow-hidden relative">
+        <div class="absolute top-0 right-0 -mr-20 -mt-20 w-96 h-96 rounded-full bg-primary-100 opacity-50 blur-3xl"></div>
+        <div class="absolute bottom-0 left-0 -ml-20 -mb-20 w-80 h-80 rounded-full bg-blue-100 opacity-50 blur-3xl"></div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <div class="inline-block px-4 py-1.5 rounded-full bg-primary-100 text-primary-700 font-semibold text-sm mb-6 border border-primary-200">
+                        衛部醫器製字第008758號
+                    </div>
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-gray-900 leading-tight mb-6">
+                        重塑傷口微環境 <br>
+                        <span class="text-primary-600">新世代超低分子量</span><br>
+                        新康膠原蛋白敷料
+                    </h1>
+                    <p class="text-lg text-gray-600 mb-8 leading-relaxed max-w-xl">
+                        專為高階傷口照護設計，採用 400-500 Da 極小分子魚鱗萃取膠原蛋白胜肽。解決臨床上「癒合緩慢」、「止血困難」與「換藥沾黏」的三大痛點。
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <a href="#features" class="px-8 py-3.5 bg-primary-600 text-white rounded-full font-bold text-center hover:bg-primary-700 transition-colors shadow-lg shadow-primary-500/30">
+                            探索核心技術
+                        </a>
+                        <a href="#specs" class="px-8 py-3.5 bg-white text-primary-600 border border-primary-200 rounded-full font-bold text-center hover:bg-primary-50 transition-colors">
+                            查看尺寸規格
+                        </a>
+                    </div>
+                    <div class="mt-8 flex items-center gap-4 text-sm text-gray-500 font-medium">
+                        <div class="flex items-center gap-1.5"><i class="fas fa-check-circle text-primary-500"></i> ISO 10993 認證</div>
+                        <div class="flex items-center gap-1.5"><i class="fas fa-check-circle text-primary-500"></i> GLP 實驗室實證</div>
+                        <div class="flex items-center gap-1.5"><i class="fas fa-check-circle text-primary-500"></i> GMP 高階製造</div>
+                    </div>
+                </div>
+                <div class="relative lg:ml-10">
+                    <div class="aspect-square bg-white rounded-3xl shadow-2xl flex items-center justify-center p-8 relative z-10 border border-gray-100 overflow-hidden">
+                        <div class="w-full h-full bg-gray-100 rounded-2xl flex items-center justify-center text-gray-400 font-medium text-lg border-2 border-dashed border-gray-300">
+                            
+                        </div>
+                    </div>
+                    <!-- Decorative elements -->
+                    <div class="absolute -top-6 -right-6 w-24 h-24 bg-yellow-100 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob"></div>
+                    <div class="absolute -bottom-6 -left-6 w-32 h-32 bg-primary-200 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-2000"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Clinical Challenges Section -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">突破傳統臨床傷口照護的瓶頸</h2>
+                <p class="text-lg text-gray-600">傳統紗布或被動型敷料僅能提供物理性遮蔽與保濕，無法主動參與組織修復。新康敷料為解決以下臨床痛點而生：</p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Card 1 -->
+                <div class="bg-gray-50 rounded-2xl p-8 border border-gray-100 hover:shadow-xl transition-shadow duration-300">
+                    <div class="w-14 h-14 bg-red-100 text-red-500 rounded-xl flex items-center justify-center text-2xl mb-6">
+                        <i class="fas fa-tint"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">止血困難與持續滲液</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        傷口常因微血管破裂而持續滲血，一般紗布缺乏主動促凝血機制，導致止血時間冗長，增加感染風險。
+                    </p>
+                </div>
+                <!-- Card 2 -->
+                <div class="bg-gray-50 rounded-2xl p-8 border border-gray-100 hover:shadow-xl transition-shadow duration-300">
+                    <div class="w-14 h-14 bg-orange-100 text-orange-500 rounded-xl flex items-center justify-center text-2xl mb-6">
+                        <i class="fas fa-band-aid"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">換藥沾黏與二次撕裂</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        傳統敷料容易與新生肉芽組織及血塊沾黏，換藥時不僅造成病患極度疼痛，更會撕裂健康組織，讓癒合進度歸零。
+                    </p>
+                </div>
+                <!-- Card 3 -->
+                <div class="bg-gray-50 rounded-2xl p-8 border border-gray-100 hover:shadow-xl transition-shadow duration-300">
+                    <div class="w-14 h-14 bg-purple-100 text-purple-500 rounded-xl flex items-center justify-center text-2xl mb-6">
+                        <i class="fas fa-hourglass-half"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">癒合停滯與無功能疤痕</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        難癒合傷口常陷入「持續發炎期」，缺乏細胞外基質 (ECM) 支撐，導致新生血管不足，最終形成無功能的纖維化疤痕。
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Core Features Section -->
+    <section id="features" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-primary-600 font-bold tracking-wider uppercase text-sm">Core Technology</span>
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mt-2 mb-4">四大核心材料科學突破</h2>
+                <p class="text-lg text-gray-600">從分子結構到物理包覆，提供完美的微環境支持系統</p>
+            </div>
+
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <!-- Image side -->
+                <div class="order-2 lg:order-1">
+                    <div class="bg-white rounded-3xl shadow-xl p-6 border border-gray-100 h-96 flex flex-col items-center justify-center">
+                        <div class="w-full h-full bg-gray-100 rounded-2xl flex items-center justify-center text-gray-400 font-medium text-lg border-2 border-dashed border-gray-300">
+                            
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Features List -->
+                <div class="order-1 lg:order-2 space-y-8">
+                    <div class="flex gap-4">
+                        <div class="flex-shrink-0 w-12 h-12 bg-primary-100 text-primary-600 rounded-full flex items-center justify-center text-xl shadow-inner">
+                            <i class="fas fa-dna"></i>
+                        </div>
+                        <div>
+                            <h4 class="text-xl font-bold text-gray-900 mb-2">極小分子 400-500 Da 膠原蛋白</h4>
+                            <p class="text-gray-600">嚴選魚鱗萃取，具備高純度與極佳生物相容性。微分子量能被組織高效率利用，無需繁複分解過程即可直接參與細胞外基質(ECM)重建。</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex gap-4">
+                        <div class="flex-shrink-0 w-12 h-12 bg-primary-100 text-primary-600 rounded-full flex items-center justify-center text-xl shadow-inner">
+                            <i class="fas fa-stopwatch"></i>
+                        </div>
+                        <div>
+                            <h4 class="text-xl font-bold text-gray-900 mb-2">微量即有效：止血時間減半</h4>
+                            <p class="text-gray-600">黃金比例 1% 添加量，透過專利物理包覆技術，在活體動物實驗中證實能有效觸發血小板活化，將止血時間從一般對照組的 151 秒縮短至 79 秒。</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex gap-4">
+                        <div class="flex-shrink-0 w-12 h-12 bg-primary-100 text-primary-600 rounded-full flex items-center justify-center text-xl shadow-inner">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <div>
+                            <h4 class="text-xl font-bold text-gray-900 mb-2">專利疏水防沾黏技術</h4>
+                            <p class="text-gray-600">突破傳統膠原蛋白易崩解且沾黏的缺點，結合 PP 不織布的疏水性網狀結構，達成「換藥零沾黏」，完美保護脆弱的供皮區與新生肉芽。</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex gap-4">
+                        <div class="flex-shrink-0 w-12 h-12 bg-primary-100 text-primary-600 rounded-full flex items-center justify-center text-xl shadow-inner">
+                            <i class="fas fa-virus-slash"></i>
+                        </div>
+                        <div>
+                            <h4 class="text-xl font-bold text-gray-900 mb-2">去端肽技術與零核酸殘留</h4>
+                            <p class="text-gray-600">徹底去除可能引發過敏的端肽(Telopeptide)，經權威實驗室 OD260 測試證實核酸殘留為零 (Undetected)，從源頭杜絕免疫排斥與發炎反應。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Clinical Evidence Section -->
+    <section id="evidence" class="py-20 bg-primary-900 text-white relative overflow-hidden">
+        <!-- Background Pattern -->
+        <div class="absolute inset-0 opacity-10">
+            <svg class="h-full w-full" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                    <pattern id="hexagons" width="50" height="43.4" patternUnits="userSpaceOnUse" patternTransform="scale(2)">
+                        <path d="M25 0L50 14.4v28.8L25 43.4L0 28.8V14.4z" fill="none" stroke="currentColor" stroke-width="1"></path>
+                    </pattern>
+                </defs>
+                <rect width="100%" height="100%" fill="url(#hexagons)"></rect>
+            </svg>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">臨床驗證與安全性實證</h2>
+                <p class="text-primary-200 text-lg">嚴謹的 GLP 實驗室病理學報告，以數據說服專業</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8 mb-12">
+                <!-- Hemostasis Data -->
+                <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
+                    <h3 class="text-2xl font-bold mb-6 flex items-center gap-3">
+                        <i class="fas fa-tint text-red-400"></i> 大鼠股動脈出血模型
+                    </h3>
+                    <div class="flex items-end gap-4 mb-4">
+                        <div class="w-full flex items-center justify-between bg-white/5 p-4 rounded-lg">
+                            <span class="text-primary-100">對照組 (一般敷料)</span>
+                            <span class="text-2xl font-bold">151 秒</span>
+                        </div>
+                    </div>
+                    <div class="flex items-end gap-4">
+                        <div class="w-full flex items-center justify-between bg-primary-600 p-4 rounded-lg shadow-lg border border-primary-400">
+                            <span class="font-bold text-white">新康膠原蛋白敷料</span>
+                            <span class="text-3xl font-extrabold text-white">79 秒</span>
+                        </div>
+                    </div>
+                    <p class="mt-4 text-sm text-primary-200">
+                        *結果顯示：止血時間大幅縮短近 50%，有效引發血栓形成與血小板活化機制。
+                    </p>
+                </div>
+
+                <!-- Pathology Data -->
+                <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
+                    <h3 class="text-2xl font-bold mb-6 flex items-center gap-3">
+                        <i class="fas fa-microscope text-blue-400"></i> 組織病理學 (H&E / MT 染色)
+                    </h3>
+                    <ul class="space-y-4">
+                        <li class="flex items-start gap-3">
+                            <i class="fas fa-check-circle text-primary-400 mt-1"></i>
+                            <div>
+                                <strong class="block text-lg">第 7 天：優越血管新生</strong>
+                                <span class="text-primary-200 text-sm">實驗組切片顯示更佳的血管新生 (Angiogenesis) 與肉芽組織生長。</span>
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fas fa-check-circle text-primary-400 mt-1"></i>
+                            <div>
+                                <strong class="block text-lg">第 14 天：拒絕無功能疤痕</strong>
+                                <span class="text-primary-200 text-sm">對照組呈現堆疊狀疤痕；新康敷料組則呈現完美平行排列的膠原蛋白網絡，恢復皮膚原本的韌性與彈性。</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Safety & Certification Section -->
+    <section id="safety" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-primary-600 font-bold tracking-wider uppercase text-sm">Safety & Quality</span>
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mt-2 mb-4">醫療級安全性與檢驗認證</h2>
+                <p class="text-lg text-gray-600">從原料純化、生物相容性到終端滅菌，全面符合國際醫療器材最高標準</p>
+            </div>
+
+            <div class="space-y-8">
+                <!-- Biocompatibility -->
+                <div class="bg-white rounded-2xl p-8 shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
+                    <div class="flex items-center gap-4 mb-6">
+                        <div class="w-12 h-12 bg-green-100 text-green-600 rounded-xl flex items-center justify-center text-xl">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-900">ISO 10993 生物相容性測試</h3>
+                    </div>
+                    <p class="text-gray-600 mb-8">經 GLP 認證實驗室執行完整活體與體外測試，證實產品對人體組織具備極高的安全性，無毒性且無刺激性。</p>
+                    
+                    <div class="grid grid-cols-2 md:grid-cols-5 gap-4 text-center">
+                        <div class="p-4 bg-gray-50 rounded-xl border border-gray-100">
+                            <div class="w-10 h-10 mx-auto bg-white text-green-500 rounded-full flex items-center justify-center mb-3 shadow-sm"><i class="fas fa-flask"></i></div>
+                            <div class="font-bold text-gray-900 text-sm mb-1">MTT 細胞毒性</div>
+                            <div class="text-xs text-gray-500">合格 (>91% 存活率)</div>
+                        </div>
+                        <div class="p-4 bg-gray-50 rounded-xl border border-gray-100">
+                            <div class="w-10 h-10 mx-auto bg-white text-green-500 rounded-full flex items-center justify-center mb-3 shadow-sm"><i class="fas fa-hand-paper"></i></div>
+                            <div class="font-bold text-gray-900 text-sm mb-1">皮內刺激試驗</div>
+                            <div class="text-xs text-gray-500">無刺激性</div>
+                        </div>
+                        <div class="p-4 bg-gray-50 rounded-xl border border-gray-100">
+                            <div class="w-10 h-10 mx-auto bg-white text-green-500 rounded-full flex items-center justify-center mb-3 shadow-sm"><i class="fas fa-feather"></i></div>
+                            <div class="font-bold text-gray-900 text-sm mb-1">皮膚敏感試驗</div>
+                            <div class="text-xs text-gray-500">無致敏性</div>
+                        </div>
+                        <div class="p-4 bg-gray-50 rounded-xl border border-gray-100">
+                            <div class="w-10 h-10 mx-auto bg-white text-green-500 rounded-full flex items-center justify-center mb-3 shadow-sm"><i class="fas fa-heartbeat"></i></div>
+                            <div class="font-bold text-gray-900 text-sm mb-1">急性全身毒性</div>
+                            <div class="text-xs text-gray-500">無毒性反應</div>
+                        </div>
+                        <div class="p-4 bg-gray-50 rounded-xl border border-gray-100">
+                            <div class="w-10 h-10 mx-auto bg-white text-green-500 rounded-full flex items-center justify-center mb-3 shadow-sm"><i class="fas fa-thermometer-half"></i></div>
+                            <div class="font-bold text-gray-900 text-sm mb-1">熱原試驗</div>
+                            <div class="text-xs text-gray-500">無致熱原性</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-8">
+                    <!-- Purity & Nucleic Acid -->
+                    <div class="bg-white rounded-2xl p-8 shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
+                        <div class="flex items-center gap-4 mb-6">
+                            <div class="w-12 h-12 bg-blue-100 text-blue-600 rounded-xl flex items-center justify-center text-xl">
+                                <i class="fas fa-dna"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-gray-900">去端肽技術與零核酸殘留</h3>
+                        </div>
+                        <ul class="space-y-5 text-gray-600">
+                            <li class="flex items-start gap-3">
+                                <div class="mt-1 bg-blue-50 p-1 rounded-full text-blue-500"><i class="fas fa-check text-sm"></i></div>
+                                <div>
+                                    <strong class="text-gray-900 block mb-1">OD260 檢測未檢出 (Undetected)</strong>
+                                    <p class="text-sm leading-relaxed">經權威實驗室正式報告證實，產品無核酸殘留，大幅降低誘發免疫排斥與發炎反應的風險，安全性遠超一般動物萃取敷料。</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <div class="mt-1 bg-blue-50 p-1 rounded-full text-blue-500"><i class="fas fa-check text-sm"></i></div>
+                                <div>
+                                    <strong class="text-gray-900 block mb-1">高純度去端肽處理</strong>
+                                    <p class="text-sm leading-relaxed">嚴選高純度材料，徹底去除可能引發人體過敏的端肽 (Telopeptide) 結構，從源頭把關醫材純度。</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Sterilization & Packaging -->
+                    <div class="bg-white rounded-2xl p-8 shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
+                        <div class="flex items-center gap-4 mb-6">
+                            <div class="w-12 h-12 bg-purple-100 text-purple-600 rounded-xl flex items-center justify-center text-xl">
+                                <i class="fas fa-radiation"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-gray-900">終端滅菌與無菌確效</h3>
+                        </div>
+                        <ul class="space-y-5 text-gray-600">
+                            <li class="flex items-start gap-3">
+                                <div class="mt-1 bg-purple-50 p-1 rounded-full text-purple-500"><i class="fas fa-check text-sm"></i></div>
+                                <div>
+                                    <strong class="text-gray-900 block mb-1">Gamma 射線滅菌 (ISO 11137-2)</strong>
+                                    <p class="text-sm leading-relaxed">採用國際標準 VDmax25 確效方法，吸收劑量達 34.5 ~ 35.9 kGy，確保封裝後的產品達到絕對無菌狀態。</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <div class="mt-1 bg-purple-50 p-1 rounded-full text-purple-500"><i class="fas fa-check text-sm"></i></div>
+                                <div>
+                                    <strong class="text-gray-900 block mb-1">老化後無菌測試 (Sterility Test)</strong>
+                                    <p class="text-sm leading-relaxed">包裝經過嚴苛老化環境與 14 天需氧菌培養測試，結果皆為「無菌生長 (No Growth)」，確保室溫下 2 年的保存效期與屏障完整性。</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Specifications Section -->
+    <section id="specs" class="py-20 bg-white border-t border-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">臨床規格選擇</h2>
+                <p class="text-lg text-gray-600">提供齊全尺寸，滿足臨床各部位表淺傷口、術後傷口及供皮區照護需求。</p>
+            </div>
+
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div class="overflow-hidden rounded-2xl border border-gray-200 shadow-sm">
+                    <table class="w-full text-left border-collapse">
+                        <thead>
+                            <tr class="bg-gray-50 text-gray-700">
+                                <th class="py-4 px-6 font-bold border-b">產品型號 / 規格</th>
+                                <th class="py-4 px-6 font-bold border-b">適用範圍說明</th>
+                            </tr>
+                        </thead>
+                        <tbody class="text-gray-600">
+                            <tr class="border-b hover:bg-gray-50">
+                                <td class="py-4 px-6 font-medium text-primary-700">10 x 10 cm</td>
+                                <td class="py-4 px-6">大面積擦傷、植皮供皮區 (Donor site)</td>
+                            </tr>
+                            <tr class="border-b hover:bg-gray-50">
+                                <td class="py-4 px-6 font-medium text-primary-700">4.5 x 10 cm</td>
+                                <td class="py-4 px-6">剖腹產、長型手術切口</td>
+                            </tr>
+                            <tr class="border-b hover:bg-gray-50">
+                                <td class="py-4 px-6 font-medium text-primary-700">4.5 x 6 cm</td>
+                                <td class="py-4 px-6">中型切割傷、一般外科縫合處</td>
+                            </tr>
+                            <tr class="border-b hover:bg-gray-50">
+                                <td class="py-4 px-6 font-medium text-primary-700">2.5 x 6 cm</td>
+                                <td class="py-4 px-6">微創手術傷口、內視鏡小開口</td>
+                            </tr>
+                            <tr class="hover:bg-gray-50">
+                                <td class="py-4 px-6 font-medium text-primary-700">2.5 x 4 cm</td>
+                                <td class="py-4 px-6">臉部小創口、兒童表淺擦傷</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="bg-primary-50 p-8 rounded-2xl border border-primary-100">
+                    <h4 class="text-xl font-bold text-primary-900 mb-4">主要適應症 (Indications)</h4>
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-start gap-2"><i class="fas fa-caret-right text-primary-500 mt-1"></i> <span class="text-gray-700">淺層皮膚傷口照護</span></li>
+                        <li class="flex items-start gap-2"><i class="fas fa-caret-right text-primary-500 mt-1"></i> <span class="text-gray-700">手術後傷口覆蓋</span></li>
+                        <li class="flex items-start gap-2"><i class="fas fa-caret-right text-primary-500 mt-1"></i> <span class="text-gray-700">輕至中度滲出液傷口</span></li>
+                        <li class="flex items-start gap-2"><i class="fas fa-caret-right text-primary-500 mt-1"></i> <span class="text-gray-700">一般表淺傷口及雷射術後</span></li>
+                        <li class="flex items-start gap-2"><i class="fas fa-caret-right text-primary-500 mt-1"></i> <span class="text-gray-700">外科取皮後之「供皮區(Donor site)」</span></li>
+                    </ul>
+
+                    <div class="flex items-center gap-4 bg-white p-4 rounded-xl shadow-sm">
+                        <div class="w-12 h-12 bg-gray-100 rounded flex items-center justify-center text-gray-500 border">
+                            
+                        </div>
+                        <div class="text-sm">
+                            <strong class="block text-gray-900">使用超便利設計</strong>
+                            <span class="text-gray-500">產品外圍帶有醫療級低敏背膠與 PU 透氣防水膜，即撕即貼，不須額外準備透氣膠帶固定。</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="py-20 bg-gray-50">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">臨床常見問題 (QA)</h2>
+                <p class="text-gray-600">為醫護人員及採購單位解答最關心的實務細節</p>
+            </div>
+
+            <div class="space-y-4">
+                <!-- FAQ Item 1 -->
+                <div class="bg-white border border-gray-200 rounded-xl overflow-hidden">
+                    <button class="faq-btn w-full px-6 py-5 text-left flex justify-between items-center focus:outline-none hover:bg-gray-50 transition-colors">
+                        <span class="font-bold text-gray-900 pr-4">Q1: 你們的產品膠原蛋白含量只有 1%，這樣濃度夠嗎？真的有止血或癒合效果嗎？</span>
+                        <i class="fas fa-chevron-down text-gray-400 transition-transform duration-300"></i>
+                    </button>
+                    <div class="accordion-content bg-gray-50 px-6">
+                        <div class="pb-5 pt-2 text-gray-600 leading-relaxed border-t border-gray-100">
+                            微量即有效。我們的活體動物實驗（大鼠股動脈出血模型）明確證實，即使只添加 1% 的 SP-500 極小分子膠原蛋白，平均止血時間就能從一般對照組的 151 秒大幅縮短至 79 秒，將止血時間減半。這種配方不僅確保了優異的止血與促癒合效果，還解決了傳統 100% 膠原蛋白極易崩解的問題。
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 2 -->
+                <div class="bg-white border border-gray-200 rounded-xl overflow-hidden">
+                    <button class="faq-btn w-full px-6 py-5 text-left flex justify-between items-center focus:outline-none hover:bg-gray-50 transition-colors">
+                        <span class="font-bold text-gray-900 pr-4">Q2: 外科取皮後的「供皮區(Donor site)」適合使用嗎？換藥會不會痛？</span>
+                        <i class="fas fa-chevron-down text-gray-400 transition-transform duration-300"></i>
+                    </button>
+                    <div class="accordion-content bg-gray-50 px-6">
+                        <div class="pb-5 pt-2 text-gray-600 leading-relaxed border-t border-gray-100">
+                            非常適合。供皮區神經末梢暴露，極度疼痛且怕拉扯。新康敷料採用創新的物理性包覆與疏水性設計，具備「快速止血」與「換藥零沾黏」特性，換藥時不會與傷口血塊或新生肉芽沾黏，能完美保護脆弱的供皮區並大幅減輕病患痛感。
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 3 -->
+                <div class="bg-white border border-gray-200 rounded-xl overflow-hidden">
+                    <button class="faq-btn w-full px-6 py-5 text-left flex justify-between items-center focus:outline-none hover:bg-gray-50 transition-colors">
+                        <span class="font-bold text-gray-900 pr-4">Q3: 一般臨床建議的換藥頻率是多久？如果洗澡滲水需要馬上換嗎？</span>
+                        <i class="fas fa-chevron-down text-gray-400 transition-transform duration-300"></i>
+                    </button>
+                    <div class="accordion-content bg-gray-50 px-6">
+                        <div class="pb-5 pt-2 text-gray-600 leading-relaxed border-t border-gray-100">
+                            視傷口滲液量而定。若為輕度滲液的一般表淺傷口，可維持 1 至 3 天更換一次。敷料外層有 PU 防潑水保護，但若洗澡導致邊緣翹起無菌屏障破壞，或滲出液外漏，建議立即依標準護理程序更換新敷料以防感染。
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 4 -->
+                <div class="bg-white border border-gray-200 rounded-xl overflow-hidden">
+                    <button class="faq-btn w-full px-6 py-5 text-left flex justify-between items-center focus:outline-none hover:bg-gray-50 transition-colors">
+                        <span class="font-bold text-gray-900 pr-4">Q4: 對於有黑色焦痂 (Eschar) 的慢性死皮傷口，可以直接貼嗎？</span>
+                        <i class="fas fa-chevron-down text-gray-400 transition-transform duration-300"></i>
+                    </button>
+                    <div class="accordion-content bg-gray-50 px-6">
+                        <div class="pb-5 pt-2 text-gray-600 leading-relaxed border-t border-gray-100">
+                            不建議直接貼覆。建議先由醫師進行「清創 (Debridement)」，去除壞死組織直到看見健康的紅色肉芽床後，再貼上新康敷料。這樣敷料釋放的微分子膠原胜肽才能真正接觸並驅動活細胞進行修復。
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer / Contact CTA -->
+    <footer id="contact" class="bg-gray-900 text-white pt-16 pb-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-12 mb-12 border-b border-gray-800 pb-12">
+                <div class="col-span-1 lg:col-span-2">
+                    <div class="flex items-center mb-6">
+                        <!-- 若您有真實 LOGO 圖檔(建議為淺色/反白版本)，請將下方的 div 替換為： <img src="您的淺色圖片網址.png" alt="XCARE 新康生醫" class="h-12 w-auto"> -->
+                        <div class="h-12 flex items-center justify-center text-sm font-medium text-gray-400 border-2 border-dashed border-gray-600 px-4 rounded bg-gray-800">
+                            
+                        </div>
+                    </div>
+                    <p class="text-gray-400 leading-relaxed mb-6 max-w-sm">
+                        致力於先進生醫材料研發，提供臨床高階傷口照護的創新解決方案。守護每一次新生，從微觀科學做起。
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-gray-400 hover:bg-primary-600 hover:text-white transition-colors"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-gray-400 hover:bg-primary-600 hover:text-white transition-colors"><i class="fab fa-line"></i></a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-gray-400 hover:bg-primary-600 hover:text-white transition-colors"><i class="fas fa-envelope"></i></a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-6 text-white border-l-4 border-primary-500 pl-3">聯絡資訊</h4>
+                    <ul class="space-y-4 text-gray-400 text-sm">
+                        <li class="flex items-start gap-3">
+                            <i class="fas fa-building mt-1 text-gray-500"></i>
+                            <span>新康生醫股份有限公司</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fas fa-map-marker-alt mt-1 text-gray-500"></i>
+                            <span>新北市板橋區大觀路2段20巷2之1號(1樓)</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fas fa-envelope mt-1 text-gray-500"></i>
+                            <a href="mailto:xinkangbio.001@gmail.com" class="hover:text-primary-400 transition-colors">xinkangbio.001@gmail.com</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="flex flex-col md:flex-row justify-between items-center text-gray-500 text-xs">
+                <p>&copy; 2026 新康生醫股份有限公司 版權所有 Xinkang Biomedical Tech Company Limited. All rights reserved.</p>
+                <div class="mt-4 md:mt-0 space-x-4">
+                    <a href="#" class="hover:text-white transition-colors">隱私權政策</a>
+                    <a href="#" class="hover:text-white transition-colors">使用條款</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Interactive Scripts -->
+    <script>
+        // Mobile Menu Toggle
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu on link click
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                menu.classList.add('hidden');
+            });
+        });
+
+        // FAQ Accordion
+        const faqBtns = document.querySelectorAll('.faq-btn');
+        
+        faqBtns.forEach(btn => {
+            btn.addEventListener('click', function() {
+                const content = this.nextElementSibling;
+                const icon = this.querySelector('i');
+                
+                // Toggle active class on content
+                content.classList.toggle('active');
+                
+                // Toggle rotation on icon
+                if (content.classList.contains('active')) {
+                    icon.style.transform = 'rotate(180deg)';
+                } else {
+                    icon.style.transform = 'rotate(0deg)';
+                }
+                
+                // Close other open accordions (optional, remove if you want multiple open)
+                faqBtns.forEach(otherBtn => {
+                    if (otherBtn !== btn) {
+                        otherBtn.nextElementSibling.classList.remove('active');
+                        otherBtn.querySelector('i').style.transform = 'rotate(0deg)';
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
